@@ -1,9 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
+$gray-medium-light: #a3b6dc;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -15,6 +16,8 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background-color: #baded0;
+  font-family: 'Roboto Slab', serif;
 }
 
 section {
@@ -61,18 +64,31 @@ p {
 
 
 /* header */
+.navbar {
+  font-size: 1.3em;
+  border-bottom: 4px solid #732640;
+  }
+
+/* link */
+.navbar-inverse .navbar-nav > li > a {
+    color: #00ff99;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #ff6666;
+}
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: #00ff99;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: #ff6666;
     text-decoration: none;
   }
 }
@@ -80,14 +96,15 @@ p {
 /* footer */
 
 footer {
+  font-size: 1.3em;
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  border-top: 4px solid #732640;
+  color: #732640;
   a {
-    color: $gray;
+    color: black;
     &:hover {
-      color: $gray-darker;
+      color: #ff6666;
     }
   }
   small {
@@ -106,6 +123,7 @@ footer {
 /* miscellaneous */
 
 .debug_dump {
+  visibility: hidden;
   clear: both;
   float: left;
   width: 100%;
